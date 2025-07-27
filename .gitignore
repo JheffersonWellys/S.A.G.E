@@ -1,0 +1,16 @@
+# Diretórios do Visual Studio
+.vs/
+bin/
+obj/
+
+# Arquivos temporários do Office
+~$*.xlsm
+*.user
+
+# Arquivos de chave de assinatura temporária
+*.pfx
+
+# Arquivos de build temporários
+*.suo
+*.vssscc
+*.cache
