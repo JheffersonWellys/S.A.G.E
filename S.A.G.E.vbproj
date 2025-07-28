@@ -197,6 +197,7 @@
     <Compile Include="Planilha6.vb">
       <DependentUpon>S.A.G.E.xlsm</DependentUpon>
     </Compile>
+    <Compile Include="Ribbon\Rbbn_SAGE.vb" />
     <Compile Include="ThisWorkbook.Designer.vb">
       <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
     </Compile>
@@ -260,6 +261,12 @@
     <None Include="Planilha5.Designer.xml">
       <DependentUpon>Planilha5.vb</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ribbon\Rbbn_SAGE.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_Padrao.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
