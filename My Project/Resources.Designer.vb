@@ -63,6 +63,493 @@ Namespace My.Resources
         '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property icn_Bttn_Adicionar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_Adicionar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogram"& _ 
+                        "aManualmente", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarEr"& _ 
+                        "ros", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronogra"& _ 
+                        "ma", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_Editar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_Editar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_ExportarEmPDF() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_ExportarEmPDF", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_ExportarEmXLSX() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_ExportarEmXLSX", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeD"& _ 
+                        "ados", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_Logon_Login_IniciarSessao() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_Logon_Login_IniciarSessao", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_MenuInicial_Logout_FinalizarSessao() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_MenuInicial_Logout_FinalizarSessao", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_Remover() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_Remover", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_Restaurar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_Restaurar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_Visualizar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_Visualizar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Bttn_VoltarPara() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Bttn_VoltarPara", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventu"& _ 
+                        "ais", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosPro"& _ 
+                        "fissionaisSupervisionados", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosInt"& _ 
+                        "egradores", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_Cursos() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_Cursos", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Atestados() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Atestados", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Docentes() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Docentes", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property icn_Padrao() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icn_Padrao", resourceCulture)

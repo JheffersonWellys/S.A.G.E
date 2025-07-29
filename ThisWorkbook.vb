@@ -10,7 +10,7 @@ Public Class ThisWorkbook
     End Sub
 
     Protected Overrides Function CreateRibbonExtensibilityObject() As Microsoft.Office.Core.IRibbonExtensibility
-        Return New Rbbn_SAGE()
+        Return New Ribbon_SAGE()
     End Function
 
 End Class
