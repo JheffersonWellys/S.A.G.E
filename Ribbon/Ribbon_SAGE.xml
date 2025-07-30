@@ -1,0 +1,1419 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+
+	<ribbon startFromScratch="true">
+
+		<tabs>
+
+			<tab id="Tb_Configuracao"
+				 label="⚠️ Atenção : Você deve configurar o banco de dados! ⚠️"
+				 getVisible="GetVisible_Tb_Configuracao">
+			</tab>
+
+
+			<tab id="Tb_Logon"
+				 label="S.A.G.E."
+				 getVisible="GetVisible_Tb_Logon">
+
+				<group id="Grp_Logon_Login"
+					   label="Login">
+
+					<button id="Bttn_Logon_Login_IniciarSessao"
+							label="Iniciar Sessão"
+							size="large"
+							getImage="GetImage_Bttn_Logon_Login_IniciarSessao"
+							getEnabled="GetEnabled_Bttn_Logon_Login_IniciarSessao"
+							onAction="OnAction_Bttn_Logon_Login_IniciarSessao"/>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_MenuInicial"
+				 label="S.A.G.E. > Menu Inicial"
+				 getVisible="GetVisible_Tb_MenuInicial">
+
+				<group id="Grp_MenuInicial_Logout"
+					   label="Logout">
+
+					<button id="Bttn_MenuInicial_Logout_FinalizarSessao"
+							label="Finalizar Sessão"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Logout_FinalizarSessao"
+							onAction="OnAction_Bttn_MenuInicial_Logout_FinalizarSessao"/>
+
+				</group>
+
+				<group id="Grp_MenuInicial_Configuracoes"
+					   label="Configurações do Sistema">
+
+					<button id="Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso"
+							label="Gestão de Acessos"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso"
+							onAction="OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso"/>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_1"/>
+
+					<button id="Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura"
+							label="Gestão de Infraestrutura"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura"
+							onAction="OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura"/>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_2"/>
+
+					<button id="Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional"
+							label="Gestão Educacional"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional"
+							onAction="OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional"/>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_3"/>
+
+					<button id="Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica"
+							label="Gestão Academica"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica"
+							onAction="OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica"/>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_4"/>
+
+					<button id="Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos"
+							label="Gestão de Eventos"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos"
+							onAction="OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos"/>
+
+				</group>
+
+				<group id="Grp_MenuInicial_Cronogramas"
+					   label="Gestão de Cronogramas">
+
+					<button id="Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico"
+							label="Gestão de Calendários Acadêmicos"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico"
+							onAction="OnAction_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico"/>
+
+					<separator id="Sprtr_MenuInicial_Cronogramas_1"/>
+
+					<button id="Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala"
+							label="Gestão de Mapas de Sala"
+							size="large"
+							getImage="GetImage_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala"
+							onAction="OnAction_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala"/>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_GestaoDeAcesso"
+				 label="S.A.G.E. > Menu Inicial > Gestão de Acessos"
+				 getVisible="GetVisible_Tb_GestaoDeAcesso">
+
+				<group id="Grp_GestaoDeAcesso_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_GestaoDeAcesso_VoltarPara_MenuInicial"
+							label="Voltar para Menu Inicial"
+							size="large"
+							getImage="GetImage_Bttn_GestaoDeAcesso_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_GestaoDeAcesso_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_GestaoDeAcesso_Configuracoes"
+					   label="Configurações de Acessos">
+
+					<menu id="Mn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios"
+						  label="Configurar Usuários"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios"
+						  getEnabled="GetEnabled_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios">
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_1"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Editar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Editar"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Remover"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_2"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_3"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoDeAcesso_Configuracoes_1"/>
+
+					<menu id="Mn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario"
+						  label="Configurar Acessos de Usuários"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario"
+						  getEnabled="GetEnabled_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario">
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_1"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Editar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Editar"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Remover"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_2"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_3"/>
+
+						<button id="Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario_Restaurar"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_GestaoDeInfraestrutura"
+				 label="S.A.G.E. > Menu Inicial > Gestão de Infraestrutura"
+				 getVisible="GetVisible_Tb_GestaoDeInfraestrutura">
+
+				<group id="Grp_GestaoDeInfraestrutura_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_GestaoDeInfraestrutura_VoltarPara_MenuInicial"
+							label="Voltar para Menu Inicial"
+							size="large"
+							getImage="GetImage_Bttn_GestaoDeInfraestrutura_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_GestaoDeInfraestrutura_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_GestaoDeInfraestrutura_Configuracoes"
+					   label="Configurações de Infraestrutura">
+
+					<menu id="Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais"
+						  label="Configurar Unidades Educacionais"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais"
+						  getEnabled="GetEnabled_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais">
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_1"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Editar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Editar"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Remover"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_2"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_3"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoDeInfraestrutura_Configuracoes_1"/>
+
+					<menu id="Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos"
+						  label="Configurar Blocos"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos"
+						  getEnabled="GetEnabled_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos">
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_1"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Editar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Editar"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Remover"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_2"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_3"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoDeInfraestrutura_Configuracoes_2"/>
+
+					<menu id="Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares"
+						  label="Configurar Andares"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares"
+						  getEnabled="GetEnabled_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares">
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_1"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Editar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Editar"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Remover"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_2"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_3"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoDeInfraestrutura_Configuracoes_3"/>
+
+					<menu id="Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula"
+						  label="Configurar Salas de Aula"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula"
+						  getEnabled="GetEnabled_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula">
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_1"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Editar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Editar"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Remover"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalaDeAula_2"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalaDeAula_3"/>
+
+						<button id="Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula_Restaurar"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_GestaoEducacional"
+				 label="S.A.G.E. > Menu Inicial > Gestão Educacional"
+				 getVisible="GetVisible_Tb_GestaoEducacional">
+
+				<group id="Grp_GestaoEducacional_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_GestaoEducacional_VoltarPara_MenuInicial"
+							label="Voltar para Menu Inicial"
+							size="large"
+							getImage="GetImage_Bttn_GestaoEducacional_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_GestaoEducacional_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_GestaoEducacional_Configuracoes"
+					   label="Configurações Educacionais">
+
+					<menu id="Mn_GestaoEducacional_Configuracoes_Gerenciar_Docentes"
+						  label="Configurar Docentes"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoEducacional_Configuracoes_Gerenciar_Docentes"
+						  getEnabled="GetEnabled_Mn_GestaoEducacional_Configuracoes_Gerenciar_Docentes">
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Adicionar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_Docentes_1"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Editar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Editar"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Remover"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_Docentes_2"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Visualizar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_Docentes_3"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Restaurar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoEducacional_Configuracoes_1"/>
+
+					<menu id="Mn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar"
+						  label="Configurar Autorizações para Lecionar"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar"
+						  getEnabled="GetEnabled_Mn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar">
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Adicionar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_1"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Editar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Editar"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Remover"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_2"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Visualizar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_3"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Restaurar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoEducacional_Configuracoes_2"/>
+
+					<menu id="Mn_GestaoEducacional_Configuracoes_Gerenciar_Atestados"
+						  label="Configurar Atestados"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoEducacional_Configuracoes_Gerenciar_Atestados"
+						  getEnabled="GetEnabled_Mn_GestaoEducacional_Configuracoes_Gerenciar_Atestados">
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Adicionar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_Atestados_1"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Editar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Editar"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Remover"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_Atestados_2"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Visualizar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoEducacional_Configuracoes_Gerenciar_Atestados_3"/>
+
+						<button id="Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Restaurar"
+								onAction="OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Atestados_Restaurar"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_GestaoAcademica"
+				 label="S.A.G.E. > Menu Inicial > Gestão Acadêmica"
+				 getVisible="GetVisible_Tb_GestaoAcademica">
+
+				<group id="Grp_GestaoAcademica_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_GestaoAcademica_VoltarPara_MenuInicial"
+							label="Voltar para Menu Inicial"
+							size="large"
+							getImage="GetImage_Bttn_GestaoAcademica_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_GestaoAcademica_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_GestaoAcademica_Configuracoes"
+					   label="Configurações Acadêmicas">
+
+					<menu id="Mn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais"
+						  label="Configurar Áreas Profissionais"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais"
+						  getEnabled="GetEnabled_Mn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais">
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Adicionar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_1"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Editar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Editar"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Remover"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_2"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Visualizar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_3"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Restaurar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoAcademica_Configuracoes_1"/>
+
+					<menu id="Mn_GestaoAcademica_Configuracoes_Gerenciar_Cursos"
+						  label="Configurar Cursos"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoAcademica_Configuracoes_Gerenciar_Cursos"
+						  getEnabled="GetEnabled_Mn_GestaoAcademica_Configuracoes_Gerenciar_Cursos">
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Adicionar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_Cursos_1"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Editar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Editar"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Remover"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_Cursos_2"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Visualizar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_Cursos_3"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Restaurar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_Cursos_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoAcademica_Configuracoes_2"/>
+
+					<menu id="Mn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares"
+						  label="Configurar Unidades Curriculares"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares"
+						  getEnabled="GetEnabled_Mn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares">
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Adicionar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_1"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Editar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Editar"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Remover"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_2"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Visualizar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_3"/>
+
+						<button id="Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Restaurar"
+								onAction="OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares_Restaurar"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_GestaoDeEventos"
+				 label="S.A.G.E. > Menu Inicial > Gestão de Eventos"
+				 getVisible="GetVisible_Tb_GestaoDeEventos">
+
+				<group id="Grp_GestaoDeEventos_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_GestaoDeEventos_VoltarPara_MenuInicial"
+							label="Voltar para Menu Inicial"
+							size="large"
+							getImage="GetImage_Bttn_GestaoDeEventos_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_GestaoDeEventos_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_GestaoDeEventos_Configuracoes"
+					   label="Configurações de Eventos">
+
+					<menu id="Mn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados"
+						  label="Configurar Feriados"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados"
+						  getEnabled="GetEnabled_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados">
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_1"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Editar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Editar"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Remover"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_2"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_3"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoDeEventos_Configuracoes_1"/>
+
+					<menu id="Mn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos"
+						  label="Configurar Recessos"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos"
+						  getEnabled="GetEnabled_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos">
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_1"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Editar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Editar"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Remover"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_2"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_3"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_GestaoDeEventos_Configuracoes_2"/>
+
+					<menu id="Mn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais"
+						  label="Configurar Datas Eventuais"
+						  size="large"
+						  getImage="GetImage_Mn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais"
+						  getEnabled="GetEnabled_Mn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais">
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Adicionar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Adicionar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_1"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Editar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Editar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Editar"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Remover"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Remover"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Remover"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_2"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Visualizar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Visualizar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_3"/>
+
+						<button id="Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Restaurar"
+								getEnabled="GetEnabled_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Restaurar"
+								onAction="OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais_Restaurar"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_EdicaoDeCronograma_CalendarioAcademico"
+				 label="S.A.G.E. > Menu Inicial > Edição de Cronograma para Calendário Acadêmico"
+				 getVisible="GetVisible_Tb_EdicaoDeCronograma_CalendarioAcademico">
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao"
+					   label="Criação">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"
+							label="Criar Cronograma com IA"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"/>
+
+					<separator id="Sprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_1"/>
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"
+							label="Recriar Cronograma com IA"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao"
+					   label="Edição">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"
+							label="Editar Cronograma Manualmente"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao"
+					   label="Configuração de Eventos">
+
+					<menu id="Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais"
+						  label="Configurar Datas Eventuais"
+						  size="large"
+						  getImage="GetImage_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais"
+						  getEnabled="GetEnabled_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais">
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Adicionar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Adicionar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_1"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Editar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Editar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Editar"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Remover"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Remover"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Remover"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_2"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Visualizar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Visualizar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_3"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Restaurar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Restaurar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_1"/>
+
+					<menu id="Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores"
+						  label="Configurar Projetos Integradores"
+						  size="large"
+						  getImage="GetImage_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores"
+						  getEnabled="GetEnabled_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores">
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Adicionar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Adicionar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_1"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Editar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Editar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Editar"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Remover"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Remover"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Remover"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_2"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Visualizar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Visualizar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_3"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Restaurar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Restaurar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores_Restaurar"/>
+
+					</menu>
+
+					<separator id="Sprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_2"/>
+
+					<menu id="Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados"
+						  label="Configurar Estágios Profissionais Supervisionados"
+						  size="large"
+						  getImage="GetImage_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados"
+						  getEnabled="GetEnabled_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados">
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Adicionar"
+								label="Adicionar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Adicionar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Adicionar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Adicionar"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_1"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Editar"
+								label="Editar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Editar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Editar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Editar"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Remover"
+								label="Remover"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Remover"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Remover"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Remover"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_2"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Visualizar"
+								label="Visualizar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Visualizar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Visualizar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Visualizar"/>
+
+						<menuSeparator id="MnSprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_3"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Restaurar"
+								label="Restaurar"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Restaurar"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Restaurar"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados_Restaurar"/>
+
+					</menu>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao"
+					   label="Validação">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"
+							label="Verificar Erros com IA"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Visualizacao"
+					   label="Visualização">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"
+								  label="Visualizar Calendário Acadêmico"
+								  size="large"
+								  getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"
+								  getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao"
+					   label="Exportação">
+
+					<menu id="Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao"
+						  label="Exportar Calendário Acadêmico"
+						  size="large"
+						  getImage="GetImage_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao"
+						  getEnabled="GetEnabled_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao">
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"
+								label="Em PDF"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"
+								label="Em XLSX"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_EdicaoDeCronograma_MapaDeSala"
+				 label="S.A.G.E. > Menu Inicial > Edição de Cronograma para Mapa de Sala"
+				 getVisible="GetVisible_Tb_EdicaoDeCronograma_MapaDeSala">
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao"
+					   label="Criação">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"
+							label="Criar Cronograma com IA"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"/>
+
+					<separator id="Sprtr_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_1"/>
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"
+							label="Recriar Cronograma com IA"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao"
+					   label="Validação">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"
+							label="Verificar Erros com IA"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao"
+					   label="Validação">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
+							label="Visualizar Mapa de Sala"
+							size="large"
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao"
+					   label="Exportação">
+
+					<menu id="Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao"
+						  label="Exportar Mapa de Sala"
+						  size="large"
+						  getImage="GetImage_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao"
+						  getEnabled="GetEnabled_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao">
+
+						<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"
+								label="Em PDF"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"/>
+
+						<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"
+								label="Em XLSX"
+								getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"/>
+
+					</menu>
+
+				</group>
+
+
+			</tab>
+
+		</tabs>
+
+	</ribbon>
+
+	<backstage>
+
+		<button idMso="FileSave"
+				visible="true"/>
+
+		<button idMso="FileSaveAs"
+				visible="false"/>
+
+		<button idMso="FileOpen"
+				visible="false"/>
+
+		<button idMso="FileClose"
+				visible="true"/>
+
+		<button idMso="ApplicationOptionsDialog"
+				visible="false"/>
+
+		<button idMso="FileExit"
+				visible="true"/>
+
+		<tab idMso="PlaceTabHome"
+             visible="false"/>
+
+		<tab idMso="TabInfo"
+             visible="false"/>
+
+		<tab idMso="TabRecent"
+             visible="false"/>
+
+		<tab idMso="TabNew"
+             visible="false"/>
+
+		<tab idMso="TabPrint"
+             visible="false"/>
+
+		<tab idMso="TabShare"
+             visible="false"/>
+
+		<tab idMso="TabHelp"
+             visible="false"/>
+
+		<tab idMso="TabPublish"
+             visible="false"/>
+
+		<tab idMso="TabPublish2"
+             visible="false"/>
+
+		<tab idMso="Publish2Tab"
+             visible="false"/>
+
+		<tab idMso="TabSave"
+             visible="false"/>
+
+		<tab idMso="TabOfficeStart"
+             visible="false"/>
+
+		<tab idMso="TabOfficeFeedback"
+             visible="false"/>
+
+		<button idMso="HistoryTab"
+				visible="false"/>
+
+		<tab id="Tb_InformacoesSobreOSistema"
+			 label="Configurações"
+			 firstColumnMaxWidth="500"
+			 title="Configurações">
+
+			<firstColumn>
+
+				<group id="Grp_InformacoesSobreOSistema_Configuracoes_Alerta"
+					   label="Banco de dados não configurado!"
+					   style="warning"
+					   getVisible="GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_Alerta">
+
+					<topItems>
+						
+						<labelControl id="Lbl_Alerta"
+									  label="Você deve configurar o banco de dados para utilizar o sistema!"/>
+						
+						<button id="Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados"
+								label="Configurar Banco de Dados"
+								style="large"
+								expand="both"
+								getImage="GetImage_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados"
+								onAction="OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados"/>
+
+					</topItems>
+					
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Configuracoes_BancoDeDados"
+					   label="Banco de dados configurado com sucesso!"
+					   getVisible="GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_BancoDeDados">
+
+					<topItems>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_CaminhoBanco"
+									  getLabel="GetLabel_InformacoesSobreOSistema_Configuracoes_BancoDeDados_CaminhoBanco"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_VersaoBanco"
+									  getLabel="GetLabel_Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_VersaoBanco" />
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_UltimaAtualizacao"
+									  getLabel="GetLabel_Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_UltimaAtualizacao" />
+
+						<button id="Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados"
+								label="Alterar Banco de Dados"
+								style="large"
+								expand="both"
+								onAction="OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados"
+								getImage="GetImage_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados" />
+
+					</topItems>
+					
+				</group>
+
+			</firstColumn>
+
+			<secondColumn>
+
+				<group id="Grp_InformacoesSobreOSistema_Sistema"
+					   label="Informações do Produto">
+
+					<topItems>
+
+						<imageControl id="ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca"
+									  getImage="GetImage_ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca"/>
+
+					</topItems>
+
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Sobre"
+					   label="Sobre">
+
+					<bottomItems>
+
+						<labelControl id="Grp_InformacoesSobreOSistema_Sobre_Texto1"
+									  label="Sistema voltado ao suporte da supervisão pedagógica"/>
+
+						<labelControl id="Grp_InformacoesSobreOSistema_Sobre_Texto2"
+									  label="na organização de calendários e mapas de sala."/>
+
+					</bottomItems>
+
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Informacoes"
+					   label="Informacoes">
+
+					<bottomItems>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Informacoes_Versao"
+									  label="Versão: 1.0.0 (build 0001)"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Informacoes_Canal"
+									  label="Canal atual: 1"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Informacoes_UltimaAtualizacao"
+									  label="Última atualização: 15/07/2025"/>
+
+					</bottomItems>
+
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Creditos"
+					   label="Creditos">
+
+					<bottomItems>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Creditos_Desenvolvedor"
+									  label="Desenvolvido por Jhefferson 'H4rzel' Wellys"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Creditos_Direitos"
+									  label="(c) 2025 S.A.G.E. - Todos os direitos reservados"/>
+					</bottomItems>
+
+				</group>
+
+
+			</secondColumn>
+
+		</tab>
+
+	</backstage>
+
+</customUI>
+

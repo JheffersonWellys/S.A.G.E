@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,157 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icn_Bttn_Adicionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_Adicionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_Editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_Editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_ExportarEmPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_ExportarEmPDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_ExportarEmXLSX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_ExportarEmXLSX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_Logon_Login_IniciarSessao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_Logon_Login_IniciarSessao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_MenuInicial_Logout_FinalizarSessao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_MenuInicial_Logout_FinalizarSessao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_Remover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_Remover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_Restaurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_Restaurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_Visualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_Visualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Bttn_VoltarPara" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Bttn_VoltarPara.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_DatasEventuais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_EstagiosProfissionaisSupervisionados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Configuracao_ProjetosIntegradores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_Cursos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_Cursos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoAcademica_Configuracoes_Gerenciar_UnidadesCurriculares.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_AcessosDeUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_DatasEventuais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeEventos_Configuracoes_Gerenciar_Recessos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Andares.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_Blocos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_SalasDeAula.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Atestados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Atestados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_AutorizacoesParaLecionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Docentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Mn_GestaoEducacional_Configuracoes_Gerenciar_Docentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_Padrao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_Padrao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
