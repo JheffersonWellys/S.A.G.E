@@ -198,8 +198,10 @@
       <DependentUpon>S.A.G.E.xlsm</DependentUpon>
     </Compile>
     <Compile Include="Ribbon\Ribbon_SAGE.vb" />
-    <Compile Include="Ribbon\Ribbon_SAGE_Functions.vb" />
+    <Compile Include="Ribbon\Ribbon_SAGE_Funcoes.vb" />
     <Compile Include="Ribbon\Ribbon_SAGE_Variaveis.vb" />
+    <Compile Include="System\System_SAGE_Funcoes.vb" />
+    <Compile Include="System\System_SAGE_Variaveis.vb" />
     <Compile Include="ThisWorkbook.Designer.vb">
       <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
     </Compile>

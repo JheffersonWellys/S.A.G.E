@@ -1,7 +1,10 @@
 ﻿Public Module Ribbon_SAGE_Variaveis
 
-    Public RibbonUI_SAGE As Office.IRibbonUI
+#Region "Objetos da Ribbon"
 
-    Public RibbonUI_TabAtiva As String = "Tb_Logon"
+    Public RibbonUI_SAGE As Office.IRibbonUI
+    Public RibbonUI_TabAtiva As String
+
+#End Region
 
 End Module

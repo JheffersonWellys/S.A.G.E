@@ -1,4 +1,6 @@
 ﻿
+Imports System.Runtime.InteropServices
+
 <Runtime.InteropServices.ComVisible(True)>
 Public Class Ribbon_SAGE
     Implements Office.IRibbonExtensibility
@@ -19,6 +21,7 @@ Public Class Ribbon_SAGE
     Public Sub Ribbon_Load(ByVal ribbonUI As Office.IRibbonUI)
         Me.ribbon = ribbonUI
         RibbonUI_SAGE = Me.ribbon
+        InicializarSistema()
     End Sub
 
 #End Region
@@ -26,6 +29,10 @@ Public Class Ribbon_SAGE
 #Region "Tabs"
 
 #Region "GetVisible"
+
+    Public Function GetVisible_Tb_Configuracao(control As Office.IRibbonControl) As Boolean
+        Return control.Id = RibbonUI_TabAtiva
+    End Function
 
     Public Function GetVisible_Tb_Logon(control As Office.IRibbonControl) As Boolean
         Return control.Id = RibbonUI_TabAtiva
@@ -72,11 +79,11 @@ Public Class Ribbon_SAGE
 #Region "GetVisible"
 
     Public Function GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_Alerta(control As Office.IRibbonControl) As Boolean
-        Return True
+        Return String.IsNullOrEmpty(Globals.Planilha2.CONFIGURACAO_SISTEMA__CAMINHO_BANCO_DE_DADOS.Value2)
     End Function
 
     Public Function GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_BancoDeDados(control As Office.IRibbonControl) As Boolean
-        Return True
+        Return Not String.IsNullOrEmpty(Globals.Planilha2.CONFIGURACAO_SISTEMA__CAMINHO_BANCO_DE_DADOS.Value2)
     End Function
 
 #End Region
@@ -574,6 +581,10 @@ Public Class Ribbon_SAGE
 #End Region
 
 #Region "GetEnabled"
+    Public Function GetEnabled_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl) As Boolean
+        Return Not String.IsNullOrEmpty(Globals.Planilha2.CONFIGURACAO_SISTEMA__CAMINHO_BANCO_DE_DADOS.Value2)
+    End Function
+
     Public Function GetEnabled_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Adicionar(control As Office.IRibbonControl) As Boolean
         Return True
     End Function
@@ -991,43 +1002,43 @@ Public Class Ribbon_SAGE
 #Region "OnAction"
 
     Public Sub OnAction_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Logout_FinalizarSessao(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_Logon")
+        Action_AbrirAba("Tb_Logon")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeAcesso(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_GestaoDeAcesso")
+        Action_AbrirAba("Tb_GestaoDeAcesso")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeInfraestrutura(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_GestaoDeInfraestrutura")
+        Action_AbrirAba("Tb_GestaoDeInfraestrutura")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoEducacional(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_GestaoEducacional")
+        Action_AbrirAba("Tb_GestaoEducacional")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoAcademica(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_GestaoAcademica")
+        Action_AbrirAba("Tb_GestaoAcademica")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Configuracoes_IrPara_GestaoDeEventos(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_GestaoDeEventos")
+        Action_AbrirAba("Tb_GestaoDeEventos")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_CalendarioAcademico(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_EdicaoDeCronograma_CalendarioAcademico")
+        Action_AbrirAba("Tb_EdicaoDeCronograma_CalendarioAcademico")
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Cronogramas_IrPara_EdicaoDeCronograma_MapaDeSala(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_EdicaoDeCronograma_MapaDeSala")
+        Action_AbrirAba("Tb_EdicaoDeCronograma_MapaDeSala")
     End Sub
 
     Public Sub OnAction_Bttn_GestaoDeAcesso_VoltarPara_MenuInicial(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_GestaoDeAcesso_Configuracoes_Gerenciar_Usuarios_Adicionar(control As Office.IRibbonControl)
@@ -1071,7 +1082,7 @@ Public Class Ribbon_SAGE
     End Sub
 
     Public Sub OnAction_Bttn_GestaoDeInfraestrutura_VoltarPara_MenuInicial(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_GestaoDeInfraestrutura_Configuracoes_Gerenciar_UnidadesEducacionais_Adicionar(control As Office.IRibbonControl)
@@ -1155,7 +1166,7 @@ Public Class Ribbon_SAGE
     End Sub
 
     Public Sub OnAction_Bttn_GestaoEducacional_VoltarPara_MenuInicial(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_GestaoEducacional_Configuracoes_Gerenciar_Docentes_Adicionar(control As Office.IRibbonControl)
@@ -1219,7 +1230,7 @@ Public Class Ribbon_SAGE
     End Sub
 
     Public Sub OnAction_Bttn_GestaoAcademica_VoltarPara_MenuInicial(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_GestaoAcademica_Configuracoes_Gerenciar_AreasProfissionais_Adicionar(control As Office.IRibbonControl)
@@ -1283,7 +1294,7 @@ Public Class Ribbon_SAGE
     End Sub
 
     Public Sub OnAction_Bttn_GestaoDeEventos_VoltarPara_MenuInicial(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_GestaoDeEventos_Configuracoes_Gerenciar_Feriados_Adicionar(control As Office.IRibbonControl)
@@ -1347,7 +1358,7 @@ Public Class Ribbon_SAGE
     End Sub
 
     Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl)
@@ -1435,7 +1446,7 @@ Public Class Ribbon_SAGE
     End Sub
 
     Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial(control As Office.IRibbonControl)
-        OnActionRibbon_AbrirAba("Tb_MenuInicial")
+        Action_AbrirAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl)
@@ -1463,11 +1474,11 @@ Public Class Ribbon_SAGE
     End Sub
 
     Public Sub OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados(control As Office.IRibbonControl)
-        MsgBox("Ação executada para o botão: " & control.Id, vbInformation, "Ribbon S.A.G.E.")
+        Action_ConfigurarBancoDeDados()
     End Sub
 
     Public Sub OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados(control As Office.IRibbonControl)
-        MsgBox("Ação executada para o botão: " & control.Id, vbInformation, "Ribbon S.A.G.E.")
+        Action_ConfigurarBancoDeDados()
     End Sub
 
 #End Region

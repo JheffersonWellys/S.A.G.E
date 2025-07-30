@@ -5,6 +5,12 @@
 
 		<tabs>
 
+			<tab id="Tb_Configuracao"
+				 label="⚠️ Atenção : Você deve configurar o banco de dados! ⚠️"
+				 getVisible="GetVisible_Tb_Configuracao">
+			</tab>
+
+
 			<tab id="Tb_Logon"
 				 label="S.A.G.E."
 				 getVisible="GetVisible_Tb_Logon">
@@ -16,6 +22,7 @@
 							label="Iniciar Sessão"
 							size="large"
 							getImage="GetImage_Bttn_Logon_Login_IniciarSessao"
+							getEnabled="GetEnabled_Bttn_Logon_Login_IniciarSessao"
 							onAction="OnAction_Bttn_Logon_Login_IniciarSessao"/>
 
 				</group>
