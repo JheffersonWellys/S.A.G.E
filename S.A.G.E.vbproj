@@ -439,7 +439,7 @@
     <ManifestKeyFile>S.A.G.E_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>537F9664DF8B131D2A6620B35EA84CE503B4FACD</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>087769E8A743C7C555344BA814B555FCF708E4B0</ManifestCertificateThumbprint>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
