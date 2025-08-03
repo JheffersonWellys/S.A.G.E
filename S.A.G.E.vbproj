@@ -15,6 +15,7 @@
     <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <ResolveComReferenceSilent>true</ResolveComReferenceSilent>
     <ProjectGuid>{43F4DF0A-CA58-4C05-A654-1886B3C14568}</ProjectGuid>
+    <SolutionID>ecac67cd-f8cd-4fd0-85ef-5e66294b6cbc</SolutionID>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
@@ -159,6 +160,7 @@
     <Import Include="Excel = Microsoft.Office.Interop.Excel" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FaixaDeOpcoes\Menu\Ribbon_Menu.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="Planilha1.Designer.vb">
       <DependentUpon>Planilha1.Designer.xml</DependentUpon>
@@ -223,6 +225,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="S.A.G.E.xlsm" />
+    <None Include="S.A.G.E_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ThisWorkbook.Designer.xml">
@@ -259,6 +262,15 @@
       <DependentUpon>Planilha6.vb</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FaixaDeOpcoes\Acoes\" />
+    <Folder Include="FaixaDeOpcoes\Configuracoes\" />
+    <Folder Include="FaixaDeOpcoes\Controles\" />
+    <Folder Include="FaixaDeOpcoes\Nucleo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FaixaDeOpcoes\Menu\Ribbon_Menu.xml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -274,6 +286,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>S.A.G.E_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7741734353183FB8E79F3C83C3807AA9CBFC0B8F</ManifestCertificateThumbprint>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -9,4 +9,8 @@ Public Class ThisWorkbook
 
     End Sub
 
+    Protected Overrides Function CreateRibbonExtensibilityObject() As Microsoft.Office.Core.IRibbonExtensibility
+        Return New Ribbon_Menu()
+    End Function
+
 End Class
