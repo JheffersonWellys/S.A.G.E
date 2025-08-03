@@ -1,0 +1,46 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+
+# Publicação temporária
+*.publish.xml
+*.pdb
+
+# Arquivos de log e cache
+*.log
+*.tmp
+*.bak
+*.cache
+
+# Arquivos do Excel temporários
+~$*
+*.xlsb
+*.xlk
+
+# Office Debugging
+*.vshost.*
+
+# Chave de assinatura (se você preferir não versionar)
+S.A.G.E_TemporaryKey.pfx
+
+# Ignorar pastas específicas do Office Designer se não editadas manualmente
+**/*.Designer.xml
+
+# Ignorar arquivos que o Excel bloqueia quando está aberto
+*.ldb
+*.lock
+
+# Arquivos de pacotes NuGet (caso use)
+packages/
+*.nupkg
+
+# Outros arquivos indesejáveis de sistema operacional
+.DS_Store
+Thumbs.db
