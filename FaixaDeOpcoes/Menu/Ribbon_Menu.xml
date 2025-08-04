@@ -1,6 +1,575 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
-  <ribbon startFromScratch="true">
-  </ribbon>
-</customUI>
+	
+	<ribbon startFromScratch="true">
+		
+		<tabs>
+			
+			<tab id="Tb_Configuracao"
+				 label="Sistema Inativo"
+				 getVisible="GetVisible_Tb_Configuracao">
+				
+				<group id="Grp_Configuracao_Informacoes"
+					   label="Configuração Necessária">
+					
+					<labelControl id="LblCntrl_Configuracoes_Mensagem_1"
+								  label="O sistema ainda não está pronto para uso."/>
+					
+					<labelControl id="LblCntrl_Configuracoes_Mensagem_2"
+								  label="É necessário configurar o banco de dados."/>
+					
+					<labelControl id="LblCntrl_Configuracoes_Mensagem_3"
+								  label="Acesse: Arquivo > Configurações > Selecionar Banco de Dados"/>
+				
+				</group>
+				
+			</tab>
 
+			<tab id="Tb_Logon"
+				 label="S.A.G.E. | Logon"
+				 getVisible="GetVisible_Tb_Logon">
+
+				<group id="Grp_Logon_Login"
+					   label="Login">
+
+					<button id="Bttn_Logon_Login_IniciarSessao"
+							label="Iniciar Sessão"
+							size="large"
+							screentip="Iniciar Sessão"
+							supertip="Clique para iniciar uma nova sessão no sistema."
+							getImage="GetImage_Bttn_Logon_Login_IniciarSessao"
+							getEnabled="GetEnabled_Bttn_Logon_Login_IniciarSessao"
+							onAction="OnAction_Bttn_Logon_Login_IniciarSessao"/>
+					
+				</group>
+				
+			</tab>
+
+			<tab id="Tb_MenuInicial"
+				 label="S.A.G.E. | Menu Inicial"
+				 getVisible="GetVisible_Tb_MenuInicial">
+
+				<group id="Grp_MenuInicial_Logout"
+					   label="Logout">
+
+					<button id="Bttn_MenuInicial_Logout_FinalizarSessao"
+							label="Finalizar Sessão"
+							size="large"
+							screentip="Finalizar Sessão"
+							supertip="Clique para encerrar sua sessão atual no sistema."
+							getImage="GetImage_Bttn_MenuInicial_Logout_FinalizarSessao"
+							getEnabled="GetEnabled_Bttn_MenuInicial_Logout_FinalizarSessao"
+							onAction="OnAction_Bttn_MenuInicial_Logout_FinalizarSessao"/>
+					
+				</group>
+
+				<group id="Grp_MenuInicial_Configuracoes"
+					   label="Configurações do Sistema">
+
+					<menu id="Mn_MenuInicial_Configuracoes_GestaoDeAcessos"
+						  label="Gestão de Acessos"
+						  size="large"
+						  screentip="Gestão de Acessos"
+						  supertip="Acesse as opções relacionadas à gestão de acessos."
+						  itemSize="large"
+						  getImage="GetImage_Mn_MenuInicial_Configuracoes_GestaoDeAcessos"
+						  getEnabled="GetEnabled_Mn_MenuInicial_Configuracoes_GestaoDeAcessos">
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios"
+								label="Gerenciar Usuários"
+								screentip="Gerenciar Usuários"
+								supertip="Adicione, atualize, exclua, visualize ou restaure usuários."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoDeAcessos_1"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios"
+								label="Gerenciar Acessos de Usuários"
+								screentip="Gerenciar Acessos de Usuários"
+								supertip="Adicione, atualize, exclua, visualize ou restaure acessos de usuários."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios"/>
+						
+					</menu>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_1"/>
+
+					<menu id="Mn_MenuInicial_Configuracoes_GestaoDeInfraestrutura"
+						  label="Gestão de Infraestrutura"
+						  size="large"
+						  screentip="Gestão de Infraestrutura"
+						  supertip="Acesse as opções relacionadas à gestão de infraestrutura."
+						  itemSize="large"
+						  getImage="GetImage_Mn_MenuInicial_Configuracoes_GestaoDeInfraestrutura"
+						  getEnabled="GetEnabled_Mn_MenuInicial_Configuracoes_GestaoDeInfraestrutura">
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais"
+								label="Gerenciar Unidades Educacionais"
+								screentip="Gerenciar Unidades Educacionais"
+								supertip="Adicione, atualize, exclua, visualize ou restaure unidades educacionais."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoDeInfraestrutura_1"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos"
+								label="Gerenciar Blocos"
+								screentip="Gerenciar Blocos"
+								supertip="Adicione, atualize, exclua, visualize ou restaure blocos."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoDeInfraestrutura_2"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares"
+								label="Gerenciar Andares"
+								screentip="Gerenciar Andares"
+								supertip="Adicione, atualize, exclua, visualize ou restaure andares."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoDeInfraestrutura_3"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas"
+								label="Gerenciar Salas"
+								screentip="Gerenciar Salas"
+								supertip="Adicione, atualize, exclua, visualize ou restaure salas."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas"/>
+
+					</menu>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_2"/>
+
+					<menu id="Mn_MenuInicial_Configuracoes_GestaoEducacional"
+						  label="Gestão Educacional"
+						  size="large"
+						  screentip="Gestão Educacional"
+						  supertip="Acesse as opções relacionadas à gestão educacional."
+						  itemSize="large"
+						  getImage="GetImage_Mn_MenuInicial_Configuracoes_GestaoEducacional"
+						  getEnabled="GetEnabled_Mn_MenuInicial_Configuracoes_GestaoEducacional">
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes"
+								label="Gerenciar Docentes"
+								screentip="Gerenciar Docentes"
+								supertip="Adicione, atualize, exclua, visualize ou restaure docentes."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoEducacional_1"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar"
+								label="Gerenciar Autorizações Para Lecionar"
+								screentip="Gerenciar Autorizações Para Lecionar"
+								supertip="Adicione, atualize, exclua, visualize ou restaure autorizações para lecionar."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoEducacional_2"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados"
+								label="Gerenciar Atestados"
+								screentip="Gerenciar Atestados"
+								supertip="Adicione, atualize, exclua, visualize ou restaure atestados."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados"/>
+
+					</menu>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_3"/>
+
+					<menu id="Mn_MenuInicial_Configuracoes_GestaoAcademica"
+						  label="Gestão Acadêmica"
+						  size="large"
+						  screentip="Gestão Acadêmica"
+						  supertip="Acesse as opções relacionadas à gestão acadêmica."
+						  itemSize="large"
+						  getImage="GetImage_Mn_MenuInicial_Configuracoes_GestaoAcademica"
+						  getEnabled="GetEnabled_Mn_MenuInicial_Configuracoes_GestaoAcademica">
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais"
+								label="Gerenciar Áreas Profissionais"
+								screentip="Gerenciar Áreas Profissionais"
+								supertip="Adicione, atualize, exclua, visualize ou restaure áreas profissionais."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoAcademica_1"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos"
+								label="Gerenciar Cursos"
+								screentip="Gerenciar Cursos"
+								supertip="Adicione, atualize, exclua, visualize ou restaure cursos."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoAcademica_2"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares"
+								label="Gerenciar Unidades Curriculares"
+								screentip="Gerenciar Unidades Curriculares"
+								supertip="Adicione, atualize, exclua, visualize ou restaure unidades curriculares."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares"/>
+
+					</menu>
+
+					<separator id="Sprtr_MenuInicial_Configuracoes_4"/>
+
+					<menu id="Mn_MenuInicial_Configuracoes_GestaoDeEventos"
+						  label="Gestão de Eventos"
+						  size="large"
+						  screentip="Gestão de Eventos"
+						  supertip="Acesse as opções relacionadas à gestão de eventos."
+						  itemSize="large"
+						  getImage="GetImage_Mn_MenuInicial_Configuracoes_GestaoDeEventos"
+						  getEnabled="GetEnabled_Mn_MenuInicial_Configuracoes_GestaoDeEventos">
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados"
+								label="Gerenciar Feriados"
+								screentip="Gerenciar Feriados"
+								supertip="Adicione, atualize, exclua, visualize ou restaure feriados."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoDeEventos_1"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos"
+								label="Gerenciar Recessos"
+								screentip="Gerenciar Recessos"
+								supertip="Adicione, atualize, exclua, visualize ou restaure recessos."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos"/>
+
+						<menuSeparator id="MnSprtr_MenuInicial_Configuracoes_GestaoDeEventos_2"/>
+
+						<button id="Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional"
+								label="Gerenciar Datas Eventuais Por Unidade Educacional"
+								screentip="Gerenciar Datas Eventuais Por Unidade Educacional"
+								supertip="Adicione, atualize, exclua, visualize ou restaure datas eventuais por unidade educacional."
+								getImage="GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional"
+								getEnabled="GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional"
+								onAction="OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional"/>
+
+					</menu>
+
+				</group>
+
+				<group id="Grp_MenuInicial_Cronogramas"
+					   label="Gestão de Cronogramas">
+
+					<button id="Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos"
+							label="Gestão de Calendários Acadêmicos"
+							size="large"
+							screentip="Gestão de Calendários Acadêmicos"
+							supertip="Adicione, atualize, exclua, visualize ou restaure calendários acadêmicos."
+							getImage="GetImage_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos"
+							getEnabled="GetEnabled_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos"
+							onAction="OnAction_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos"/>
+
+					<button id="Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala"
+							label="Gestão de Mapas de Sala"
+							size="large"
+							screentip="Gestão de Mapas de Sala"
+							supertip="Adicione, atualize, exclua, visualize ou restaure mapas de sala."
+							getImage="GetImage_Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala"
+							getEnabled="GetEnabled_Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala"
+							onAction="OnAction_Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala"/>
+
+				</group>
+				
+			</tab>
+
+			<tab id="Tb_EdicaoDeCronograma_CalendarioAcademico"
+				 label="S.A.G.E. > Menu Inicial > Edição de Cronograma para Calendário Acadêmico"
+				 getVisible="GetVisible_Tb_EdicaoDeCronograma_CalendarioAcademico">
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							screentip="Voltar para o Menu Inicial"
+							supertip="Sair do modo edição do calendário acadêmico e voltar para o menu inicial."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao"
+					   label="Criação">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"
+							label="Criar Cronograma com IA"
+							size="large"
+							screentip="Criar Cronograma com IA"
+							supertip="Clique para criar um cronograma automaticamente com auxílio de inteligência artificial (IA)."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA"/>
+
+					<separator id="Sprtr_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_1"/>
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"
+							label="Recriar Cronograma com IA"
+							size="large"
+							screentip="Recriar Cronograma com IA"
+							supertip="Clique para recriar o cronograma automaticamente com auxílio de inteligência artificial (IA)."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao"
+					   label="Edição">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"
+							label="Editar Cronograma Manualmente"
+							size="large"
+							screentip="Editar Cronograma Manualmente"
+							supertip="Clique para editar o cronograma manualmente."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos"
+				   label="Configuração de Eventos">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma"
+							label="Gerenciar Datas Eventuais Por Turma"
+							size="large"
+							screentip="Gerenciar Datas Eventuais Por Turma"
+							supertip="Acesse o formulário para cadastrar, editar, excluir, visualizar ou restaurar registros de datas eventuais por turma no sistema."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma"/>
+
+					<separator id="Sprtr_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_1"/>
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores"
+							label="Gerenciar Datas de Projetos Integradores"
+							size="large"
+							screentip="Gerenciar Datas de Projetos Integradores"
+							supertip="Acesse o formulário para cadastrar, editar, excluir, visualizar ou restaurar registros de datas de projetos integradores no sistema."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores"/>
+
+					<separator id="Sprtr_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_2"/>
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados"
+							label="Gerenciar Datas de Estágios Profissionais Supervisionados"
+							size="large"
+							screentip="Gerenciar Datas de Estágios Profissionais Supervisionados"
+							supertip="Acesse o formulário para cadastrar, editar, excluir, visualizar ou restaurar registros de datas de estágios profissionais supervisionados no sistema."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao"
+					   label="Validação">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"
+							label="Verificar Erros com IA"
+							size="large"
+							screentip="Verificar Erros com IA"
+							supertip="Clique para verificar automaticamente possíveis erros no cronograma usando inteligência artificial (IA)."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Visualizacao"
+					   label="Visualização">
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"
+							label="Visualizar Cronograma do Calendário Acadêmico"
+							size="large"
+							screentip="Visualizar Cronograma do Calendário Acadêmico"
+							supertip="Clique para visualizar o cronograma."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"/>
+
+					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"
+							label="Visualizar Calendário Acadêmico"
+							size="large"
+							screentip="Visualizar Calendário Acadêmico"
+							supertip="Clique para visualizar o calendário acadêmico."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao"
+					   label="Exportação">
+
+					<menu id="Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao"
+						  label="Exportar Calendário Acadêmico"
+						  size="large"
+						  screentip="Exportar Calendário Acadêmico"
+						  supertip="Acesse as opções de exportação do calendário acadêmico."
+						  getImage="GetImage_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao"
+						  getEnabled="GetEnabled_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao">
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"
+								label="Em PDF"
+								screentip="Em PDF"
+								supertip="Clique para exportar em PDF."
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF"/>
+
+						<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"
+								label="Em XLSX"
+								screentip="Em XLSX"
+								supertip="Clique para exportar em XLSX."
+								getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+
+			<tab id="Tb_EdicaoDeCronograma_MapaDeSala"
+				 label="S.A.G.E. > Menu Inicial > Edição de Cronograma para Mapa de Sala"
+				 getVisible="GetVisible_Tb_EdicaoDeCronograma_MapaDeSala">
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							screentip="Voltar para o Menu Inicial"
+							supertip="Sair do modo edição do mapa de sala e voltar para o menu inicial."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao"
+					   label="Criação">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"
+							label="Criar Cronograma com IA"
+							size="large"
+							screentip="Criar Cronograma com IA"
+							supertip="Clique para criar um cronograma automaticamente com auxílio de inteligência artificial (IA)."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA"/>
+
+					<separator id="Sprtr_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_1"/>
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"
+							label="Recriar Cronograma com IA"
+							size="large"
+							screentip="Recriar Cronograma com IA"
+							supertip="Clique para recriar um cronograma automaticamente com auxílio de inteligência artificial (IA)."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao"
+					   label="Validação">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"
+							label="Verificar Erros com IA"
+							size="large"
+							screentip="Verificar Erros com IA"
+							supertip="Clique para verificar automaticamente possíveis erros no cronograma usando inteligência artificial (IA)."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao"
+					   label="Visualização">
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
+							label="Visualizar Cronograma do Mapa de Sala"
+							size="large"
+							screentip="Visualizar Cronograma do Mapa de Sala"
+							supertip="Clique para visualizar o cronograma."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"/>
+
+					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"
+							label="Visualizar Mapa de Sala"
+							size="large"
+							screentip="Visualizar Mapa de Sala"
+							supertip="Clique para visualizar o mapa de sala."
+							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"/>
+
+				</group>
+
+				<group id="Grp_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao"
+					   label="Exportação">
+
+					<menu id="Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao"
+						  label="Exportar Mapa de Sala"
+						  size="large"
+						  screentip="Exportar Mapa de Sala"
+						  supertip="Acesse as opções de exportação do mapa de sala."
+						  getImage="GetImage_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao"
+						  getEnabled="GetEnabled_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao">
+
+						<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"
+								label="Em PDF"
+								screentip="Em PDF"
+								supertip="Clique para exportar em PDF."
+								getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF"/>
+
+						<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"
+								label="Em XLSX"
+								screentip="Em XLSX"
+								supertip="Clique para exportar em XLSX."
+								getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"
+								getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"
+								onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX"/>
+
+					</menu>
+
+				</group>
+
+			</tab>
+			
+		</tabs>
+		
+	</ribbon>
+	
+</customUI>
