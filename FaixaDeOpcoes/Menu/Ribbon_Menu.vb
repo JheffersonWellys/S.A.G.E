@@ -1,4 +1,6 @@
-﻿<Runtime.InteropServices.ComVisible(True)>
+﻿Imports System.Drawing
+
+<Runtime.InteropServices.ComVisible(True)>
 Public Class Ribbon_Menu
     Implements Office.IRibbonExtensibility
 
@@ -12,12 +14,578 @@ Public Class Ribbon_Menu
     End Function
 
 #Region "Retornos de Chamada da Faixa de Opções"
-    'Crie métodos de retorno de chamada aqui. Para obter mais informações sobre como adicionar métodos de retorno de chamada, visite https://go.microsoft.com/fwlink/?LinkID=271226
+
+#Region "Ribbon"
+
     Public Sub Ribbon_Load(ByVal ribbonUI As Office.IRibbonUI)
         Me.ribbon = ribbonUI
     End Sub
 
+#End Region
 
+#Region "Tabs"
+
+#Region "GetVisible"
+
+    Public Function GetVisible_Tb_Configuracao(control As Office.IRibbonControl) As Boolean
+        Return Controles_Abas.GetVisible_Configuracao()
+    End Function
+
+    Public Function GetVisible_Tb_Logon(control As Office.IRibbonControl) As Boolean
+        Return Controles_Abas.GetVisible_Logon()
+    End Function
+
+    Public Function GetVisible_Tb_MenuInicial(control As Office.IRibbonControl) As Boolean
+        Return Controles_Abas.GetVisible_MenuInicial()
+    End Function
+
+    Public Function GetVisible_Tb_EdicaoDeCronograma_CalendarioAcademico(control As Office.IRibbonControl) As Boolean
+        Return Controles_Abas.GetVisible_EdicaoDeCronograma_CalendarioAcademico()
+    End Function
+
+    Public Function GetVisible_Tb_EdicaoDeCronograma_MapaDeSala(control As Office.IRibbonControl) As Boolean
+        Return Controles_Abas.GetVisible_EdicaoDeCronograma_MapaDeSala()
+    End Function
+
+#End Region
+
+#End Region
+
+#Region "Buttons"
+
+#Region "GetImage"
+
+    Public Function GetImage_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_IniciarSessao()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Logout_FinalizarSessao(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_FinalizarSessao()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarUsuarios()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarAcessosDeUsuarios()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarUnidadesEducacionais()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarBlocos()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarAndares()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarSalas()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarDocentes()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarAutorizacoesParaLecionar()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarAtestados()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarAreasProfissionais()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarCursos()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarUnidadesCurriculares()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarFeriados()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarRecessos()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GerenciarDatasEventuaisPorUnidadeEducacional()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GestaoDeCalendariosAcademicos()
+    End Function
+
+    Public Function GetImage_Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_GestaoDeMapasDeSala()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_VoltarParaMenuInicial()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_CriarComIA()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_RecriarComIA()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_Edicao_EditarCronogramaManualmente()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_GerenciarDatasEventuaisPorTurma()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_GerenciarDatasDeProjetosIntegradores()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_GerenciarDatasDeEstagiosProfissionaisSupervisionados()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_VisualizarErros()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_VisualizarCronograma()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_VisualizarCalendarioAcademico()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_ExportacaoEmPDF()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_CalendarioAcademico_ExportacaoEmXLSX()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_VoltarParaMenuInicial()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_CriarComIA()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_RecriarComIA()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_VisualizarErros()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_VisualizarCronograma()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_VisualizarMapaDeSala()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_ExportacaoEmPDF()
+    End Function
+
+    Public Function GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_MapaDeSala_ExportacaoEmXLSX()
+    End Function
+
+#End Region
+
+#Region "GetEnabled"
+
+    Public Function GetEnabled_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_IniciarSessao()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Logout_FinalizarSessao(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_FinalizarSessao()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarUsuarios()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarAcessosDeUsuarios()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarUnidadesEducacionais()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarBlocos()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarAndares()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarSalas()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarDocentes()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarAutorizacoesParaLecionar()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarAtestados()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarAreasProfissionais()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarCursos()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarUnidadesCurriculares()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarFeriados()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarRecessos()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GerenciarDatasEventuaisPorUnidadeEducacional()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GestaoDeCalendariosAcademicos()
+    End Function
+
+    Public Function GetEnabled_Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_GestaoDeMapasDeSala()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_CriarComIA()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_RecriarComIA()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_EditarCronogramaManualmente()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_GerenciarDatasEventuaisPorTurma()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_GerenciarDatasDeProjetosIntegradores()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_GerenciarDatasDeEstagiosProfissionaisSupervisionados()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_VisualizarErros()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_VisualizarCronograma()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_VisualizarCalendarioAcademico()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_ExportacaoEmPDF()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_CalendarioAcademico_ExportacaoEmXLSX()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_MapaDeSala_CriarComIA()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_MapaDeSala_RecriarComIA()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_MapaDeSala_VisualizarErros()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_MapaDeSala_VisualizarCronograma()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_MapaDeSala_VisualizarMapaDeSala()
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_MapaDeSala_ExportacaoEmPDF
+    End Function
+
+    Public Function GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetEnabled_MapaDeSala_ExportacaoEmXLSX
+    End Function
+
+#End Region
+
+#Region "OnAction"
+
+    Public Sub OnAction_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_IniciarSessao()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Logout_FinalizarSessao(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_FinalizarSessao()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarUsuarios()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarAcessosDeUsuarios()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarUnidadesEducacionais()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarBlocos()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarAndares()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarSalas()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarDocentes()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarAutorizacoesParaLecionar()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarAtestados()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarAreasProfissionais()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarCursos()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarUnidadesCurriculares()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarFeriados()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarRecessos()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GerenciarDatasEventuaisPorUnidadeEducacional()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GestaoDeCalendariosAcademicos()
+    End Sub
+
+    Public Sub OnAction_Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_GestaoDeMapasDeSala()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_VoltarParaMenuInicial()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_CriarComIA()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_RecriarComIA()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_Edicao_EditarCronogramaManualmente()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_GerenciarDatasEventuaisPorTurma()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_GerenciarDatasDeProjetosIntegradores()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_GerenciarDatasDeEstagiosProfissionaisSupervisionados()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_ExportacaoVisualizarErros()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_ExportacaoEmPDF()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_ExportacaoEmXLSX()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_VoltarParaMenuInicial()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_CriarComIA()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_RecriarComIA()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_ExportacaoVisualizarErros()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_VisualizarCronograma()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_VisualizarMapaDeSala()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_ExportacaoEmPDF()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_MapaDeSala_ExportacaoEmXLSX()
+    End Sub
+
+#End Region
+
+#End Region
+
+#Region "Menus"
+
+#Region "GetImage"
+
+    Public Function GetImage_Mn_MenuInicial_Configuracoes_GestaoDeAcessos(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Menus.GetImage_GestaoDeAcessos
+    End Function
+
+    Public Function GetImage_Mn_MenuInicial_Configuracoes_GestaoDeInfraestrutura(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Menus.GetImage_GestaoDeInfraestrutura
+    End Function
+
+    Public Function GetImage_Mn_MenuInicial_Configuracoes_GestaoEducacional(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Menus.GetImage_GestaoEducacional
+    End Function
+
+    Public Function GetImage_Mn_MenuInicial_Configuracoes_GestaoAcademica(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Menus.GetImage_GestaoAcademica
+    End Function
+
+    Public Function GetImage_Mn_MenuInicial_Configuracoes_GestaoDeEventos(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Menus.GetImage_GestaoDeEventos
+    End Function
+
+    Public Function GetImage_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Menus.GetImage_CalendarioAcademico_Exportacao
+    End Function
+
+    Public Function GetImage_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Menus.GetImage_MapaDeSala_Exportacao
+    End Function
+
+#End Region
+
+#Region "GetEnabled"
+
+    Public Function GetEnabled_Mn_MenuInicial_Configuracoes_GestaoDeAcessos(control As Office.IRibbonControl) As Boolean
+        Return Controles_Menus.GetEnabled_GestaoDeAcessos
+    End Function
+
+    Public Function GetEnabled_Mn_MenuInicial_Configuracoes_GestaoDeInfraestrutura(control As Office.IRibbonControl) As Boolean
+        Return Controles_Menus.GetEnabled_GestaoDeInfraestrutura
+    End Function
+
+    Public Function GetEnabled_Mn_MenuInicial_Configuracoes_GestaoEducacional(control As Office.IRibbonControl) As Boolean
+        Return Controles_Menus.GetEnabled_GestaoEducacional
+    End Function
+
+    Public Function GetEnabled_Mn_MenuInicial_Configuracoes_GestaoAcademica(control As Office.IRibbonControl) As Boolean
+        Return Controles_Menus.GetEnabled_GestaoAcademica
+    End Function
+
+    Public Function GetEnabled_Mn_MenuInicial_Configuracoes_GestaoDeEventos(control As Office.IRibbonControl) As Boolean
+        Return Controles_Menus.GetEnabled_GestaoDeEventos
+    End Function
+
+    Public Function GetEnabled_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao(control As Office.IRibbonControl) As Boolean
+        Return Controles_Menus.GetEnabled_CalendarioAcademico_Exportacao
+    End Function
+
+    Public Function GetEnabled_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao(control As Office.IRibbonControl) As Boolean
+        Return Controles_Menus.GetEnabled_MapaDeSala_Exportacao
+    End Function
+
+#End Region
+
+#End Region
 
 #End Region
 

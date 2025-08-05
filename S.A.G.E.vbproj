@@ -160,6 +160,13 @@
     <Import Include="Excel = Microsoft.Office.Interop.Excel" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FaixaDeOpcoes\Acoes\Acoes_Botoes.vb" />
+    <Compile Include="FaixaDeOpcoes\Controles\Controles_Botoes.vb" />
+    <Compile Include="FaixaDeOpcoes\Controles\Controles_Grupos.vb" />
+    <Compile Include="FaixaDeOpcoes\Controles\Controles_Abas.vb" />
+    <Compile Include="FaixaDeOpcoes\Controles\Controles_ControleDeImagem.vb" />
+    <Compile Include="FaixaDeOpcoes\Controles\Controles_Menus.vb" />
+    <Compile Include="FaixaDeOpcoes\Controles\Controles_Rotulos.vb" />
     <Compile Include="FaixaDeOpcoes\Menu\Ribbon_Menu.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="Planilha1.Designer.vb">
@@ -263,13 +270,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="FaixaDeOpcoes\Acoes\" />
     <Folder Include="FaixaDeOpcoes\Configuracoes\" />
-    <Folder Include="FaixaDeOpcoes\Controles\" />
     <Folder Include="FaixaDeOpcoes\Nucleo\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FaixaDeOpcoes\Menu\Ribbon_Menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_Padrao.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
