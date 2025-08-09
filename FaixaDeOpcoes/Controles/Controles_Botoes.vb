@@ -4,7 +4,13 @@ Module Controles_Botoes
 
 #Region "GetImage"
 
+#Region "Ribbon"
+
     Public Function GetImage_IniciarSessao() As Bitmap
+        Return My.Resources.icn_Padrao
+    End Function
+
+    Public Function GetImage_SolicitarAcessoViaTeams() As Bitmap
         Return My.Resources.icn_Padrao
     End Function
 
@@ -162,7 +168,23 @@ Module Controles_Botoes
 
 #End Region
 
+#Region "Backstage"
+
+    Public Function GetImage_Configuracoes_ConfigurarBancoDeDados() As Bitmap
+        Return My.Resources.icn_Padrao
+    End Function
+
+    Public Function GetImage_Configuracoes_ReconfigurarBancoDeDados() As Bitmap
+        Return My.Resources.icn_Padrao
+    End Function
+
+#End Region
+
+#End Region
+
 #Region "GetEnabled"
+
+#Region "Ribbon"
 
     Public Function GetEnabled_IniciarSessao() As Boolean
         Return True
@@ -311,6 +333,8 @@ Module Controles_Botoes
     Public Function GetEnabled_MapaDeSala_ExportacaoEmXLSX() As Boolean
         Return True
     End Function
+
+#End Region
 
 #End Region
 

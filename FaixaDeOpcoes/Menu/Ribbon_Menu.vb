@@ -55,8 +55,14 @@ Public Class Ribbon_Menu
 
 #Region "GetImage"
 
+#Region "Ribbon"
+
     Public Function GetImage_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl) As Bitmap
         Return Controles_Botoes.GetImage_IniciarSessao()
+    End Function
+
+    Public Function GetImage_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_SolicitarAcessoViaTeams()
     End Function
 
     Public Function GetImage_Bttn_MenuInicial_Logout_FinalizarSessao(control As Office.IRibbonControl) As Bitmap
@@ -213,10 +219,30 @@ Public Class Ribbon_Menu
 
 #End Region
 
+#Region "Backstage"
+
+    Public Function GetImage_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_Configuracoes_ConfigurarBancoDeDados()
+    End Function
+
+    Public Function GetImage_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados(control As Office.IRibbonControl) As Bitmap
+        Return Controles_Botoes.GetImage_Configuracoes_ReconfigurarBancoDeDados()
+    End Function
+
+#End Region
+
+#End Region
+
 #Region "GetEnabled"
+
+#Region "Ribbon"
 
     Public Function GetEnabled_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl) As Boolean
         Return Controles_Botoes.GetEnabled_IniciarSessao()
+    End Function
+
+    Public Function GetEnabled_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams(control As Office.IRibbonControl) As Boolean
+        Return True
     End Function
 
     Public Function GetEnabled_Bttn_MenuInicial_Logout_FinalizarSessao(control As Office.IRibbonControl) As Boolean
@@ -365,10 +391,17 @@ Public Class Ribbon_Menu
 
 #End Region
 
+#End Region
+
 #Region "OnAction"
+
+#Region "Ribbon"
 
     Public Sub OnAction_Bttn_Logon_Login_IniciarSessao(control As Office.IRibbonControl)
         Call Acoes_Botoes.OnAction_IniciarSessao()
+    End Sub
+    Public Sub OnAction_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_SolicitarAcessoViaTeams()
     End Sub
 
     Public Sub OnAction_Bttn_MenuInicial_Logout_FinalizarSessao(control As Office.IRibbonControl)
@@ -517,6 +550,20 @@ Public Class Ribbon_Menu
 
 #End Region
 
+#Region "Backstage"
+
+    Public Sub OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_Configuracoes_ConfigurarBancoDeDados()
+    End Sub
+
+    Public Sub OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_Configuracoes_ReconfigurarBancoDeDados()
+    End Sub
+
+#End Region
+
+#End Region
+
 #End Region
 
 #Region "Menus"
@@ -581,6 +628,67 @@ Public Class Ribbon_Menu
 
     Public Function GetEnabled_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao(control As Office.IRibbonControl) As Boolean
         Return Controles_Menus.GetEnabled_MapaDeSala_Exportacao
+    End Function
+
+#End Region
+
+#End Region
+
+#Region "Groups"
+
+#Region "GetVisible"
+
+#Region "Ribbon"
+
+    Public Function GetVisible_Grp_Logon_Configuracao_Informacoes_BancoDeDadosNaoConfigurado(control As Office.IRibbonControl) As Boolean
+        Return True
+    End Function
+
+    Public Function GetVisible_Grp_Logon_Configuracao_Informacoes_UsuarioLogado(control As Office.IRibbonControl) As Boolean
+        Return True
+    End Function
+
+#End Region
+
+#Region "Backstage"
+
+    Public Function GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_Alerta(control As Office.IRibbonControl) As Boolean
+        Return True
+    End Function
+
+    Public Function GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_BancoDeDados(control As Office.IRibbonControl) As Boolean
+        Return True
+    End Function
+
+#End Region
+
+#End Region
+
+#End Region
+
+#Region "Labels"
+
+#Region "Ribbon"
+
+    Public Function GetLabel_LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario(control As Office.IRibbonControl) As String
+        Dim dono = "Jhefferson Wellys"
+        Return $"O sistema está em uso por: [{dono}]."
+    End Function
+
+#End Region
+
+#Region "Backstage"
+
+    Public Function GetLabel_InformacoesSobreOSistema_Configuracoes_BancoDeDados_CaminhoBanco(control As Office.IRibbonControl) As String
+        Return "Caminho: ..."
+    End Function
+
+    Public Function GetLabel_Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_VersaoBanco(control As Office.IRibbonControl) As String
+        Return "Versão: ..."
+    End Function
+
+    Public Function GetLabel_Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_UltimaAtualizacao(control As Office.IRibbonControl) As String
+        Return "Última Atualização: ..."
     End Function
 
 #End Region

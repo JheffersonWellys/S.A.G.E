@@ -2,7 +2,13 @@
 
 #Region "OnAction"
 
+#Region "Ribbon"
+
     Public Sub OnAction_IniciarSessao()
+        MessageBox.Show("Em breve...")
+    End Sub
+
+    Public Sub OnAction_SolicitarAcessoViaTeams()
         MessageBox.Show("Em breve...")
     End Sub
 
@@ -149,6 +155,20 @@
     Public Sub OnAction_MapaDeSala_ExportacaoEmXLSX()
         MessageBox.Show("Em breve...")
     End Sub
+
+#End Region
+
+#Region "Backstage"
+
+    Public Sub OnAction_Configuracoes_ConfigurarBancoDeDados()
+        MessageBox.Show("Em breve...")
+    End Sub
+
+    Public Sub OnAction_Configuracoes_ReconfigurarBancoDeDados()
+        MessageBox.Show("Em breve...")
+    End Sub
+
+#End Region
 
 #End Region
 

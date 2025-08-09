@@ -4,26 +4,6 @@
 	<ribbon startFromScratch="true">
 		
 		<tabs>
-			
-			<tab id="Tb_Configuracao"
-				 label="Sistema Inativo"
-				 getVisible="GetVisible_Tb_Configuracao">
-				
-				<group id="Grp_Configuracao_Informacoes"
-					   label="Configuração Necessária">
-					
-					<labelControl id="LblCntrl_Configuracoes_Mensagem_1"
-								  label="O sistema ainda não está pronto para uso."/>
-					
-					<labelControl id="LblCntrl_Configuracoes_Mensagem_2"
-								  label="É necessário configurar o banco de dados."/>
-					
-					<labelControl id="LblCntrl_Configuracoes_Mensagem_3"
-								  label="Acesse: Arquivo > Configurações > Selecionar Banco de Dados"/>
-				
-				</group>
-				
-			</tab>
 
 			<tab id="Tb_Logon"
 				 label="S.A.G.E. | Logon"
@@ -40,9 +20,50 @@
 							getImage="GetImage_Bttn_Logon_Login_IniciarSessao"
 							getEnabled="GetEnabled_Bttn_Logon_Login_IniciarSessao"
 							onAction="OnAction_Bttn_Logon_Login_IniciarSessao"/>
-					
+
 				</group>
-				
+
+				<group id="Grp_Logon_Configuracao_Informacoes_BancoDeDadosNaoConfigurado"
+					   label="Configuração Necessária"
+					   getVisible="GetVisible_Grp_Logon_Configuracao_Informacoes_BancoDeDadosNaoConfigurado">
+
+					<labelControl id="LblCntrl_Configuracao_Informacoes_BancoDeDadosNaoConfigurado_Mensagem_1"
+								  label="O sistema ainda não está pronto para uso."/>
+
+					<labelControl id="LblCntrl_Configuracao_Informacoes_BancoDeDadosNaoConfigurado_Mensagem_2"
+								  label="É necessário configurar o banco de dados."/>
+
+					<labelControl id="LblCntrl_Configuracao_Informacoes_BancoDeDadosNaoConfigurado_Mensagem_3"
+								  label="Acesse: Arquivo > Configurações > Selecionar Banco de Dados"/>
+
+				</group>
+
+				<group id="Grp_Logon_Configuracao_Informacoes_UsuarioLogado"
+					   label="Configuração Necessária"
+					   getVisible="GetVisible_Grp_Logon_Configuracao_Informacoes_UsuarioLogado">
+
+					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario"
+									  getLabel="GetLabel_LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario"/>
+
+					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Instrucoes_1"
+								  label="Em caso de urgência, solicite acesso via Teams."/>
+					
+					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Instrucoes_2"
+								  label="Use o botão ao lado para abrir o Teams."/>
+
+					<separator id="Sprtr_Grp_Logon_Configuracao_Informacoes_UsuarioLogado_1"/>
+					
+					<button id="Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams"
+							label="Solicitar Acesso Via Teams"
+							size="large"
+							screentip="Solicitar Acesso Via Teams"
+							supertip="Envia um aviso ao(a) usuário(a) atual e registra sua solicitação."
+							getImage="GetImage_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams"
+							getEnabled="GetEnabled_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams"
+							onAction="OnAction_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams"/>
+
+				</group>
+
 			</tab>
 
 			<tab id="Tb_MenuInicial"
@@ -573,5 +594,192 @@
 		</tabs>
 		
 	</ribbon>
-	
+
+	<backstage>
+
+		<button idMso="FileSave"
+				visible="true"/>
+
+		<button idMso="FileSaveAs"
+				visible="false"/>
+
+		<button idMso="FileOpen"
+				visible="false"/>
+
+		<button idMso="FileClose"
+				visible="true"/>
+
+		<button idMso="ApplicationOptionsDialog"
+				visible="false"/>
+
+		<button idMso="FileExit"
+				visible="true"/>
+
+		<tab idMso="PlaceTabHome"
+             visible="false"/>
+
+		<tab idMso="TabInfo"
+             visible="false"/>
+
+		<tab idMso="TabRecent"
+             visible="false"/>
+
+		<tab idMso="TabNew"
+             visible="false"/>
+
+		<tab idMso="TabPrint"
+             visible="false"/>
+
+		<tab idMso="TabShare"
+             visible="false"/>
+
+		<tab idMso="TabHelp"
+             visible="false"/>
+
+		<tab idMso="TabPublish"
+             visible="false"/>
+
+		<tab idMso="TabPublish2"
+             visible="false"/>
+
+		<tab idMso="Publish2Tab"
+             visible="false"/>
+
+		<tab idMso="TabSave"
+             visible="false"/>
+
+		<tab idMso="TabOfficeStart"
+             visible="false"/>
+
+		<tab idMso="TabOfficeFeedback"
+             visible="false"/>
+
+		<button idMso="HistoryTab"
+				visible="false"/>
+
+		<tab id="Tb_InformacoesSobreOSistema"
+			 label="Configurações"
+			 firstColumnMaxWidth="500"
+			 title="Configurações">
+
+			<firstColumn>
+
+				<group id="Grp_InformacoesSobreOSistema_Configuracoes_Alerta"
+					   label="Banco de dados não configurado!"
+					   style="warning"
+					   getVisible="GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_Alerta">
+
+					<topItems>
+
+						<labelControl id="Lbl_Alerta"
+									  label="Você deve configurar o banco de dados para utilizar o sistema!"/>
+
+						<button id="Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados"
+								label="Selecionar Banco de Dados"
+								style="large"
+								expand="both"
+								getImage="GetImage_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados"
+								onAction="OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados"/>
+
+					</topItems>
+
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Configuracoes_BancoDeDados"
+					   label="Banco de dados configurado com sucesso!"
+					   getVisible="GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_BancoDeDados">
+
+					<topItems>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_CaminhoBanco"
+									  getLabel="GetLabel_InformacoesSobreOSistema_Configuracoes_BancoDeDados_CaminhoBanco"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_VersaoBanco"
+									  getLabel="GetLabel_Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_VersaoBanco" />
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_UltimaAtualizacao"
+									  getLabel="GetLabel_Lbl_InformacoesSobreOSistema_Configuracoes_BancoDeDados_UltimaAtualizacao" />
+
+						<button id="Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados"
+								label="Alterar Banco de Dados"
+								style="large"
+								expand="both"
+								getImage="GetImage_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados"
+								onAction="OnAction_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados"/>
+
+					</topItems>
+
+				</group>
+
+			</firstColumn>
+
+			<secondColumn>
+
+				<group id="Grp_InformacoesSobreOSistema_Sistema"
+					   label="Informações do Produto">
+
+					<topItems>
+
+						<imageControl id="ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca"
+									  getImage="GetImage_ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca"/>
+
+					</topItems>
+
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Sobre"
+					   label="Sobre">
+
+					<bottomItems>
+
+						<labelControl id="Grp_InformacoesSobreOSistema_Sobre_Texto1"
+									  label="Sistema voltado ao suporte da supervisão pedagógica"/>
+
+						<labelControl id="Grp_InformacoesSobreOSistema_Sobre_Texto2"
+									  label="na organização de calendários e mapas de sala."/>
+
+					</bottomItems>
+
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Informacoes"
+					   label="Informacoes">
+
+					<bottomItems>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Informacoes_Versao"
+									  label="Versão: 1.0.0 (build 0001)"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Informacoes_Canal"
+									  label="Canal atual: 1"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Informacoes_UltimaAtualizacao"
+									  label="Última atualização: 15/07/2025"/>
+
+					</bottomItems>
+
+				</group>
+
+				<group id="Grp_InformacoesSobreOSistema_Creditos"
+					   label="Creditos">
+
+					<bottomItems>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Creditos_Desenvolvedor"
+									  label="Desenvolvido por Jhefferson 'H4rzel' Wellys"/>
+
+						<labelControl id="Lbl_InformacoesSobreOSistema_Creditos_Direitos"
+									  label="(c) 2025 S.A.G.E. - Todos os direitos reservados"/>
+					</bottomItems>
+
+				</group>
+
+
+			</secondColumn>
+
+		</tab>
+
+	</backstage>
+
+
 </customUI>
