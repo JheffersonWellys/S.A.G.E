@@ -117,6 +117,14 @@
         MessageBox.Show("Em breve...")
     End Sub
 
+    Public Sub OnAction_CalendarioAcademico_Cronograma_VisualizarCronograma()
+        Call Configurar_VisualizacaoCronograma_CalendarioAcademico(True)
+    End Sub
+
+    Public Sub OnAction_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico()
+        Call Configurar_VisualizacaoCronograma_CalendarioAcademico(False)
+    End Sub
+
     Public Sub OnAction_CalendarioAcademico_ExportacaoEmPDF()
         MessageBox.Show("Em breve...")
     End Sub
@@ -142,11 +150,11 @@
     End Sub
 
     Public Sub OnAction_MapaDeSala_VisualizarCronograma()
-        MessageBox.Show("Em breve...")
+        Call Configurar_VisualizacaoCronograma_MapaDeSala(True)
     End Sub
 
     Public Sub OnAction_MapaDeSala_VisualizarMapaDeSala()
-        MessageBox.Show("Em breve...")
+        Call Configurar_VisualizacaoCronograma_MapaDeSala(False)
     End Sub
 
     Public Sub OnAction_MapaDeSala_ExportacaoEmPDF()

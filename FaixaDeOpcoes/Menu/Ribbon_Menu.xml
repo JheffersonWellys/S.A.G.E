@@ -436,7 +436,9 @@
 							screentip="Visualizar Cronograma do Calendário Acadêmico"
 							supertip="Clique para visualizar o cronograma."
 							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"
-							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"/>
+							getVisible="GetVisible_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma"/>
 
 					<button id="Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"
 							label="Visualizar Calendário Acadêmico"
@@ -444,7 +446,9 @@
 							screentip="Visualizar Calendário Acadêmico"
 							supertip="Clique para visualizar o calendário acadêmico."
 							getImage="GetImage_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"
-							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"/>
+							getVisible="GetVisible_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"
+							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"
+							onAction="OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico"/>
 
 				</group>
 
@@ -548,6 +552,7 @@
 							supertip="Clique para visualizar o cronograma."
 							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
 							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
+							getVisible="GetVisible_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"
 							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma"/>
 
 					<button id="Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"
@@ -557,6 +562,7 @@
 							supertip="Clique para visualizar o mapa de sala."
 							getImage="GetImage_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"
 							getEnabled="GetEnabled_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"
+							getVisible="GetVisible_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"
 							onAction="OnAction_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala"/>
 
 				</group>

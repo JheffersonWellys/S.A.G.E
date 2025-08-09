@@ -5,31 +5,31 @@ Public Module Controles_Menus
 #Region "GetImage"
 
     Public Function GetImage_GestaoDeAcessos() As Bitmap
-        Return My.Resources.icn_Padrao
+        Return My.Resources.Icn_Mn_MenuInicial_Configuracoes_GestaoDeAcessos
     End Function
 
     Public Function GetImage_GestaoDeInfraestrutura() As Bitmap
-        Return My.Resources.icn_Padrao
+        Return My.Resources.Icn_Mn_MenuInicial_Configuracoes_GestaoDeInfraestrutura
     End Function
 
     Public Function GetImage_GestaoEducacional() As Bitmap
-        Return My.Resources.icn_Padrao
+        Return My.Resources.Icn_Mn_MenuInicial_Configuracoes_GestaoEducacional
     End Function
 
     Public Function GetImage_GestaoAcademica() As Bitmap
-        Return My.Resources.icn_Padrao
+        Return My.Resources.Icn_Mn_MenuInicial_Configuracoes_GestaoAcademica
     End Function
 
     Public Function GetImage_GestaoDeEventos() As Bitmap
-        Return My.Resources.icn_Padrao
+        Return My.Resources.Icn_Mn_MenuInicial_Configuracoes_GestaoDeEventos
     End Function
 
     Public Function GetImage_CalendarioAcademico_Exportacao() As Bitmap
-        Return My.Resources.icn_Padrao
+        Return My.Resources.Icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao
     End Function
 
     Public Function GetImage_MapaDeSala_Exportacao() As Bitmap
-        Return My.Resources.icn_Padrao
+        Return My.Resources.Icn_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao
     End Function
 
 #End Region

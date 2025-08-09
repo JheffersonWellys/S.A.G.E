@@ -1,10 +1,4 @@
-﻿Public Module Configuracao_Abas
-
-#Region "Variáveis"
-
-    Public TabAtual As String = "Tb_Logon"
-
-#End Region
+﻿Public Module Configuracoes_Abas
 
 #Region "Funções"
 

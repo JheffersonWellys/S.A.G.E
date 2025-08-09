@@ -390,6 +390,30 @@ Public Class Ribbon_Menu
 
 #End Region
 
+#Region "GetVisible"
+
+#Region "Ribbon"
+
+    Public Function GetVisible_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetVisible_CalendarioAcademico_Cronograma_VisualizarCronograma
+    End Function
+
+    Public Function GetVisible_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetVisible_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico
+    End Function
+
+    Public Function GetVisible_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetVisible_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma
+    End Function
+
+    Public Function GetVisible_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala(control As Office.IRibbonControl) As Boolean
+        Return Controles_Botoes.GetVisible_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala
+    End Function
+
+#End Region
+
+#End Region
+
 #Region "OnAction"
 
 #Region "Ribbon"
@@ -499,6 +523,14 @@ Public Class Ribbon_Menu
 
     Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados(control As Office.IRibbonControl)
         Call Acoes_Botoes.OnAction_CalendarioAcademico_GerenciarDatasDeEstagiosProfissionaisSupervisionados()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_Cronograma_VisualizarCronograma()
+    End Sub
+
+    Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico(control As Office.IRibbonControl)
+        Call Acoes_Botoes.OnAction_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico()
     End Sub
 
     Public Sub OnAction_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros(control As Office.IRibbonControl)

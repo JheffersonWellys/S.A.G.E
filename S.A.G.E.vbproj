@@ -161,7 +161,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FaixaDeOpcoes\Acoes\Acoes_Botoes.vb" />
-    <Compile Include="FaixaDeOpcoes\Configuracoes\Configuracao_Abas.vb" />
+    <Compile Include="FaixaDeOpcoes\Configuracoes\Configuracoes_Abas.vb" />
+    <Compile Include="FaixaDeOpcoes\Configuracoes\Configuracoes_Botoes.vb" />
     <Compile Include="FaixaDeOpcoes\Controles\Controles_Botoes.vb" />
     <Compile Include="FaixaDeOpcoes\Controles\Controles_Grupos.vb" />
     <Compile Include="FaixaDeOpcoes\Controles\Controles_Abas.vb" />
@@ -170,7 +171,7 @@
     <Compile Include="FaixaDeOpcoes\Controles\Controles_Rotulos.vb" />
     <Compile Include="FaixaDeOpcoes\Menu\Ribbon_Menu.vb" />
     <Compile Include="FaixaDeOpcoes\Nucleo\Nucleo_Variaveis.vb" />
-    <Compile Include="FaixaDeOpcoes\Nucleo\Ribbon\Controles_Ribbon.vb" />
+    <Compile Include="FaixaDeOpcoes\Nucleo\Controles\Controles_Ribbon.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="Planilha1.Designer.vb">
       <DependentUpon>Planilha1.Designer.xml</DependentUpon>
@@ -272,7 +273,6 @@
       <DependentUpon>Planilha6.vb</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="FaixaDeOpcoes\Menu\Ribbon_Menu.xml" />
   </ItemGroup>
@@ -307,6 +307,153 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCronograma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarCronograma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoDeEventos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Visualizacao_VisualizarMapaDeSala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Validacao_VisualizarErros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_RecriarComIA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Criacao_CriarComIA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_VisualizarCalendarioAcademico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Validacao_VisualizarErros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Edicao_EditarCronogramaManualmente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_CriarComIA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarAcessosDeUsuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeAcessos_GerenciarUsuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarUnidadesEducacionais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarAreasProfissionais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarCursos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoAcademica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarDatasEventuaisPorUnidadeEducacional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarRecessos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeEventos_GerenciarFeriados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeProjetosIntegradores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasDeEstagiosProfissionaisSupervisionados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAtestados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarDocentes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoEducacional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoEducacional_GerenciarAutorizacoesParaLecionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarSalas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarBlocos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoDeInfraestrutura_GerenciarAndares.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoDeInfraestrutura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoDeAcessos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_MenuInicial_Logout_FinalizarSessao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_Logon_Login_IniciarSessao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_InformacoesSobreOSistema_Configuracoes_BancoDeDados_ReconfigurarBancoDeDados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_InformacoesSobreOSistema_Configuracoes_ConfigurarBancoDeDados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmXLSX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmXLSX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao_EmPDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_Cronograma_Exportacao_EmPDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_VoltarPara_MenuInicial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_MapaDeSala_VoltarPara_MenuInicial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Exportacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
