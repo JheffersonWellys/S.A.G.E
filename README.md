@@ -1,19 +1,20 @@
 # 📘 S.A.G.E. - Sistema de Administração e Gestão Educacional
 
 > 💼 **Status do Projeto:** Em desenvolvimento  
-> 🔧 **Fase atual:** Estruturação inicial da Ribbon personalizada no Excel
+> 🔧 **Fase atual:** Implementação do módulo de Banco de Dados e integração inicial com a Ribbon
 
 ```
 🛠️ Progresso por módulo:
-[🟡] Ribbon (Faixa de Opcoes)         🔨 Em desenvolvimento
-[⚪] Login e Autenticacao             ⏳ Ainda nao iniciado
-[⚪] Cadastros e Gerenciamento        ⏳ Ainda nao iniciado
-[⚪] Cronogramas e Mapas              ⏳ Ainda nao iniciado
+[🟢] Ribbon (Faixa de Opcoes)         ✅ Estruturada e funcional
+[🟡] Banco de Dados (SQLite)          🔨 Em desenvolvimento
+[⚪] Login e Autenticacao              ⏳ Ainda nao iniciado
+[⚪] Cadastros e Gerenciamento         ⏳ Ainda nao iniciado
+[⚪] Cronogramas e Mapas               ⏳ Ainda nao iniciado
 ```
 
 ---
 
-## 📁 Estrutura Inicial do Projeto
+## 📁 Estrutura Atual do Projeto
 
 ```
 S.A.G.E/
@@ -35,27 +36,37 @@ S.A.G.E/
 │       ├── Controles/
 │       ├── Acoes/
 │       └── Nucleo/
-
+├── Infraestrutura/                             ← **NOVO** 
+│   ├── BancoDeDados/                           ← **NOVO**
+│   │   ├── Configuracoes/                      ← **NOVO**
+│   │   │   └── ConfiguracaoBanco.vb            ← **NOVO**
+│   │   ├── DAL/                                ← **NOVO**
+│   │   │   └── DAL_*.vb (um por entidade)      
+│   │   ├── BLL/                                ← **NOVO**
+│   │   │   └── BLL_*.vb (um por entidade)         
+│   │   └── Modelos/                            ← **NOVO**
+│   │       └── Clss_*.vb (um por entidade)
+│   └── XML/                                    ← **NOVO**
+│       └── XML_ControleDeAcesso.vb
 ```
 
 ---
 
-## 🚧 Etapa atual
+## 🚧 Etapa Atual
 
-No momento, o projeto está sendo iniciado pela **implementação da Ribbon personalizada** no Excel, incluindo:
+O projeto agora entra na fase de **desenvolvimento do Banco de Dados**, incluindo:
 
-- Estruturação do XML (`Ribbon_Menu.xml`)
-- Implementação dos callbacks (`Ribbon_Menu.vb`)
-- Controle de tabs, botões e estado da interface
-
-As demais funcionalidades ainda serão construídas.
+- Criação do esquema em SQLite
+- Estruturação dos módulos DAL (Data Access Layer) e BLL (Business Logic Layer)
+- Integração inicial com botões e menus da Ribbon
+- Preparação para controle de acesso e CRUD das principais entidades
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
 - VB.NET com VSTO (Excel)
-- SQLite (em breve)
+- SQLite
 - XML para interface Ribbon
 - Git + Conventional Commits
 
@@ -65,5 +76,3 @@ As demais funcionalidades ainda serão construídas.
 
 Desenvolvido por **Jhefferson Wellys**  
 [github.com/jheffersonwellys](https://github.com/jheffersonwellys)
-
----
