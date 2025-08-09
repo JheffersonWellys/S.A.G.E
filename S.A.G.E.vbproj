@@ -172,6 +172,36 @@
     <Compile Include="FaixaDeOpcoes\Menu\Ribbon_Menu.vb" />
     <Compile Include="FaixaDeOpcoes\Nucleo\Nucleo_Ribbon.vb" />
     <Compile Include="FaixaDeOpcoes\Nucleo\Nucleo_Variaveis.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Andar.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_AreaProfissional.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Atestado.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_AutorizacaoLecionar.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Bloco.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_CalendarioAcademico.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Cronograma.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Curso.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_DataEventualPorTurma.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_DataEventualPorUnidadeEducacional.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Docente.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Enum_Horario.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Enum_StatusCurso.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Enum_Tabela.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Enum_TipoAula.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Enum_TipoUnidadeCurricular.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Enum_TipoUsuario.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Enum_Turno.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_EstagioProfissional.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Feriado.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_MapaSala.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_PermissaoUsuario.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_ProjetoIntegrador.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Recesso.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_RegistroAcesso.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Sala.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Turma.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_UnidadeCurricular.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_UnidadeEducacional.vb" />
+    <Compile Include="Infraestrutura\BancoDeDados\Classes\Clss_Usuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="Planilha1.Designer.vb">
       <DependentUpon>Planilha1.Designer.xml</DependentUpon>
@@ -457,6 +487,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoAcademica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infraestrutura\BancoDeDados\BLL\" />
+    <Folder Include="Infraestrutura\BancoDeDados\Configuracoes\" />
+    <Folder Include="Infraestrutura\BancoDeDados\DAL\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
