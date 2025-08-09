@@ -19,6 +19,7 @@ Public Class Ribbon_Menu
 
     Public Sub Ribbon_Load(ByVal ribbonUI As Office.IRibbonUI)
         Me.ribbon = ribbonUI
+        UIRibbon_SAGE = Me.ribbon
     End Sub
 
 #End Region
@@ -26,10 +27,6 @@ Public Class Ribbon_Menu
 #Region "Tabs"
 
 #Region "GetVisible"
-
-    Public Function GetVisible_Tb_Configuracao(control As Office.IRibbonControl) As Boolean
-        Return Controles_Abas.GetVisible_Configuracao()
-    End Function
 
     Public Function GetVisible_Tb_Logon(control As Office.IRibbonControl) As Boolean
         Return Controles_Abas.GetVisible_Logon()
@@ -640,12 +637,16 @@ Public Class Ribbon_Menu
 
 #Region "Ribbon"
 
+    Public Function GetVisible_Grp_Logon_Login(control As Office.IRibbonControl) As Boolean
+        Return GetVisible_Logon_Login()
+    End Function
+
     Public Function GetVisible_Grp_Logon_Configuracao_Informacoes_BancoDeDadosNaoConfigurado(control As Office.IRibbonControl) As Boolean
-        Return True
+        Return GetVisible_Informacoes_BancoDeDadosNaoConfigurado()
     End Function
 
     Public Function GetVisible_Grp_Logon_Configuracao_Informacoes_UsuarioLogado(control As Office.IRibbonControl) As Boolean
-        Return True
+        Return GetVisible_Informacoes_UsuarioLogado()
     End Function
 
 #End Region
@@ -653,11 +654,11 @@ Public Class Ribbon_Menu
 #Region "Backstage"
 
     Public Function GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_Alerta(control As Office.IRibbonControl) As Boolean
-        Return True
+        Return GetVisible_InformacoesSobreOSistema_Configuracoes_Alerta()
     End Function
 
     Public Function GetVisible_Grp_InformacoesSobreOSistema_Configuracoes_BancoDeDados(control As Office.IRibbonControl) As Boolean
-        Return True
+        Return GetVisible_InformacoesSobreOSistema_Configuracoes_BancoDeDados()
     End Function
 
 #End Region
@@ -671,8 +672,7 @@ Public Class Ribbon_Menu
 #Region "Ribbon"
 
     Public Function GetLabel_LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario(control As Office.IRibbonControl) As String
-        Dim dono = "Jhefferson Wellys"
-        Return $"O sistema está em uso por: [{dono}]."
+        Return $"O sistema está em uso por: [{Informacao_BancoDeDados_UsuarioLogado_Nome}]!"
     End Function
 
 #End Region

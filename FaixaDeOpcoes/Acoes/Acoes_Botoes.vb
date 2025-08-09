@@ -5,15 +5,16 @@
 #Region "Ribbon"
 
     Public Sub OnAction_IniciarSessao()
-        MessageBox.Show("Em breve...")
+        Call NavegarParaAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_SolicitarAcessoViaTeams()
-        MessageBox.Show("Em breve...")
+        Informacao_BancoDeDados_EmUso = False
+        Call AtualizarRibbon()
     End Sub
 
     Public Sub OnAction_FinalizarSessao()
-        MessageBox.Show("Em breve...")
+        Call NavegarParaAba("Tb_Logon")
     End Sub
 
     Public Sub OnAction_GerenciarUsuarios()
@@ -77,15 +78,15 @@
     End Sub
 
     Public Sub OnAction_GestaoDeCalendariosAcademicos()
-        MessageBox.Show("Em breve...")
+        Call NavegarParaAba("Tb_EdicaoDeCronograma_CalendarioAcademico")
     End Sub
 
     Public Sub OnAction_GestaoDeMapasDeSala()
-        MessageBox.Show("Em breve...")
+        Call NavegarParaAba("Tb_EdicaoDeCronograma_MapaDeSala")
     End Sub
 
     Public Sub OnAction_CalendarioAcademico_VoltarParaMenuInicial()
-        MessageBox.Show("Em breve...")
+        Call NavegarParaAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_CalendarioAcademico_CriarComIA()
@@ -125,7 +126,7 @@
     End Sub
 
     Public Sub OnAction_MapaDeSala_VoltarParaMenuInicial()
-        MessageBox.Show("Em breve...")
+        Call NavegarParaAba("Tb_MenuInicial")
     End Sub
 
     Public Sub OnAction_MapaDeSala_CriarComIA()
@@ -161,11 +162,13 @@
 #Region "Backstage"
 
     Public Sub OnAction_Configuracoes_ConfigurarBancoDeDados()
-        MessageBox.Show("Em breve...")
+        Informacao_BancoDeDados_Configurado = True
+        Call AtualizarRibbon()
     End Sub
 
     Public Sub OnAction_Configuracoes_ReconfigurarBancoDeDados()
-        MessageBox.Show("Em breve...")
+        Informacao_BancoDeDados_Configurado = False
+        Call AtualizarRibbon()
     End Sub
 
 #End Region

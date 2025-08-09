@@ -6,11 +6,12 @@
 		<tabs>
 
 			<tab id="Tb_Logon"
-				 label="S.A.G.E. | Logon"
+				 label="S.A.G.E. > Logon"
 				 getVisible="GetVisible_Tb_Logon">
 
 				<group id="Grp_Logon_Login"
-					   label="Login">
+					   label="Login"
+					   getVisible="GetVisible_Grp_Logon_Login">
 
 					<button id="Bttn_Logon_Login_IniciarSessao"
 							label="Iniciar Sessão"
@@ -42,17 +43,6 @@
 					   label="Configuração Necessária"
 					   getVisible="GetVisible_Grp_Logon_Configuracao_Informacoes_UsuarioLogado">
 
-					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario"
-									  getLabel="GetLabel_LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario"/>
-
-					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Instrucoes_1"
-								  label="Em caso de urgência, solicite acesso via Teams."/>
-					
-					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Instrucoes_2"
-								  label="Use o botão ao lado para abrir o Teams."/>
-
-					<separator id="Sprtr_Grp_Logon_Configuracao_Informacoes_UsuarioLogado_1"/>
-					
 					<button id="Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams"
 							label="Solicitar Acesso Via Teams"
 							size="large"
@@ -62,12 +52,24 @@
 							getEnabled="GetEnabled_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams"
 							onAction="OnAction_Bttn_Logon_Configuracao_Informacoes_UsuarioLogado_SolicitarAcessoViaTeams"/>
 
+
+					<separator id="Sprtr_Grp_Logon_Configuracao_Informacoes_UsuarioLogado_1"/>
+
+					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario"
+									  getLabel="GetLabel_LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Usuario"/>
+
+					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Instrucoes_1"
+								  label="Em caso de urgência, solicite acesso via Teams."/>
+					
+					<labelControl id="LblCntrl_Logon_Configuracao_Informacoes_UsuarioLogado_Instrucoes_2"
+								  label="Use o botão ao lado para abrir o Teams."/>
+
 				</group>
 
 			</tab>
 
 			<tab id="Tb_MenuInicial"
-				 label="S.A.G.E. | Menu Inicial"
+				 label="S.A.G.E. > Menu Inicial"
 				 getVisible="GetVisible_Tb_MenuInicial">
 
 				<group id="Grp_MenuInicial_Logout"
@@ -304,6 +306,8 @@
 							getEnabled="GetEnabled_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos"
 							onAction="OnAction_Bttn_MenuInicial_Cronogramas_GestaoDeCalendariosAcademicos"/>
 
+					<separator id="Sprtr_Grp_MenuInicial_Cronogramas_1"/>
+					
 					<button id="Bttn_MenuInicial_Cronogramas_GestaoDeMapasDeSala"
 							label="Gestão de Mapas de Sala"
 							size="large"
