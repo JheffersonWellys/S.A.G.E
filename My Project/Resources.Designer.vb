@@ -565,9 +565,19 @@ Namespace My.Resources
         '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property icn_Padrao() As System.Drawing.Bitmap
+        Friend ReadOnly Property Icn_Padrao() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icn_Padrao", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Icn_Padrao", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Img_ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Img_ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

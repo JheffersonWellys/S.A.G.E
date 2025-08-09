@@ -727,6 +727,18 @@ Public Class Ribbon_Menu
 
 #End Region
 
+#Region "Image Controls"
+
+#Region "Backstage"
+
+    Public Function GetImage_ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca(control As Office.IRibbonControl) As Bitmap
+        Return GetImage_Sistema_Logomarca()
+    End Function
+
+#End Region
+
+#End Region
+
 #End Region
 
 #Region "Auxiliares"

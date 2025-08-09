@@ -170,8 +170,8 @@
     <Compile Include="FaixaDeOpcoes\Controles\Controles_Menus.vb" />
     <Compile Include="FaixaDeOpcoes\Controles\Controles_Rotulos.vb" />
     <Compile Include="FaixaDeOpcoes\Menu\Ribbon_Menu.vb" />
+    <Compile Include="FaixaDeOpcoes\Nucleo\Nucleo_Ribbon.vb" />
     <Compile Include="FaixaDeOpcoes\Nucleo\Nucleo_Variaveis.vb" />
-    <Compile Include="FaixaDeOpcoes\Nucleo\Controles\Controles_Ribbon.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="Planilha1.Designer.vb">
       <DependentUpon>Planilha1.Designer.xml</DependentUpon>
@@ -277,7 +277,7 @@
     <EmbeddedResource Include="FaixaDeOpcoes\Menu\Ribbon_Menu.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icn_Padrao.png" />
+    <None Include="Resources\Icn_Padrao.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
@@ -366,9 +366,6 @@
     <None Include="Resources\Icn_Bttn_MenuInicial_Configuracoes_GestaoAcademica_GerenciarUnidadesCurriculares.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoAcademica.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_GestaoDeEventos_GerenciarDatasEventuaisPorTurma.png" />
   </ItemGroup>
   <ItemGroup>
@@ -454,6 +451,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icn_Bttn_EdicaoDeCronograma_CalendarioAcademico_Cronograma_Criacao_RecriarComIA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Img_ImgCntrl_InformacoesSobreOSistema_Sistema_Logomarca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Mn_MenuInicial_Configuracoes_GestaoAcademica.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
